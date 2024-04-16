@@ -7,7 +7,15 @@ import {
   Platform,
 } from "react-native";
 
+import { useNavigation } from "@react-navigation/native";
+
 export default function MealItem({ item }) {
+  const navigation = useNavigation();
+
+  function pressHandler() {
+    navigation.navigate("MealDetails", { mealId: item.id });
+  }
+
   return (
     <View style={styles.mealItem}>
       <Pressable
@@ -16,6 +24,7 @@ export default function MealItem({ item }) {
           pressed ? styles.pressed : null,
         ]}
         android_ripple={{ color: "#ccc", borderless: true }}
+        onPress={pressHandler}
       >
         <View style={styles.innerContainer}>
           <View>
