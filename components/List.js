@@ -8,10 +8,8 @@ export default function List({ items, title }) {
       </View>
       <View style={styles.list}>
         {items.map((item) => (
-          <View style={styles.itemContainer}>
-            <Text key={item} style={styles.item}>
-              {item}
-            </Text>
+          <View key={item} style={styles.itemContainer}>
+            <Text style={styles.item}>{item}</Text>
           </View>
         ))}
       </View>
