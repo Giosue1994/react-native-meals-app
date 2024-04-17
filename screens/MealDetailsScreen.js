@@ -13,9 +13,9 @@ export default function MealDetailsScreen({ route, navigation }) {
   }
 
   useLayoutEffect(() => {
-    const mealTitle = MEALS.find((meal) => meal.id === mealId).title;
+    // const mealTitle = MEALS.find((meal) => meal.id === mealId).title;
     navigation.setOptions({
-      title: mealTitle,
+      // title: mealTitle,
       headerRight: () => (
         <IconButton
           icon="star"
